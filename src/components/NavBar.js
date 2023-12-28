@@ -14,7 +14,7 @@ const NavBar = () => {
   const handleOrders = () => {
     if (user) {
     } else {
-      navigate(`/sign-in`);
+      navigate(`/orders`);
     }
   };
 
@@ -42,14 +42,14 @@ const NavBar = () => {
         <div className="w-[30%] flex flex-row gap-12 justify-center font-ligt text-white">
           <div
             onClick={() => handleOrders()}
-            className="flex flex-col justify-center items-center gap-1 text-2xl cursor-pointer hover:text-thirdColor"
+            className="flex flex-col justify-center items-center gap-1 text-2xl cursor-pointer hover:text-goldishColor"
           >
             <FiShoppingBag />
             <p className="text-base">Orders</p>
           </div>
           <div
             onClick={() => handleProfile()}
-            className="flex flex-col justify-center items-center gap-1 text-2xl cursor-pointer hover:text-thirdColor"
+            className="flex flex-col justify-center items-center gap-1 text-2xl cursor-pointer hover:text-goldishColor"
           >
             <FaRegUserCircle />
             <h4 className="text-base">

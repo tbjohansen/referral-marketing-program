@@ -1,8 +1,23 @@
-import React from "react";
+import React, { useState } from "react";
 import hp from "../../assets/images/microsoft4.jpg";
 import Button from "./Button";
+import { Box, Modal } from "@mui/material";
+
+const style = {
+  position: "absolute",
+  top: "45%",
+  left: "50%",
+  transform: "translate(-50%, -50%)",
+  width: 600,
+  bgcolor: "background.paper",
+  p: 4,
+};
 
 const OrderCard = () => {
+  const [open, setOpen] = useState(false);
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
+
   return (
     <div className="w-full h-[250px] rounded-xl bg-white flex flex-col gap-1">
       <a href="/" className="overflow-hidden rounded-xl">
@@ -34,16 +49,31 @@ const OrderCard = () => {
               </p>
             </div>
           </div>
-          <div className="flex flex-row justify-between items-between py-2">
-            <div className="flex flex-col justify-center" >
-                <h4 className="text-lg text-primaryColor font-medium">Order #ORD-176</h4>
-            </div>
-            <div className="">
-              <Button text={"Pay Now"}/>
-            </div>
-          </div>
         </div>
       </a>
+      <div className="flex flex-row justify-between items-between py-2 px-4">
+        <div className="flex flex-col justify-center">
+          <h4 className="text-lg text-primaryColor font-medium">
+            Order #ORD-176
+          </h4>
+        </div>
+        <div className="">
+          <Button text={"Pay Now"} onClick={handleOpen} />
+        </div>
+      </div>
+      <Modal
+        open={open}
+        onClose={handleClose}
+        aria-labelledby="modal-modal-title"
+        aria-describedby="modal-modal-description"
+      >
+        <Box sx={style} className="rounded-md">
+          <div>
+            <h3 className="text-center text-xl py-4">Select Payment Method</h3>
+            <div></div>
+          </div>
+        </Box>
+      </Modal>
     </div>
   );
 };

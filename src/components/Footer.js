@@ -12,7 +12,7 @@ const Footer = () => {
         <div className="h-full p-5">
           <h4 className="mb-5 font-semibold text-xl">Quick Links</h4>
           <ul>
-            <li className="my-2 hover:text-thirdColor text-sm transition-all ease-in-out duration-300">
+            <li className="my-2 hover:text-goldishColor text-sm transition-all ease-in-out duration-300">
               <Link href="/">Referral Marketing</Link>
             </li>
           </ul>
@@ -21,10 +21,10 @@ const Footer = () => {
           <h4 className="mb-5 font-semibold text-xl">Legal</h4>
 
           <ul>
-            <li className="my-2 hover:text-thirdColor text-sm transition-all ease-in-out duration-300">
+            <li className="my-2 hover:text-goldishColor text-sm transition-all ease-in-out duration-300">
               <Link href="/">Terms & Conditions</Link>
             </li>
-            <li className="my-2 hover:text-thirdColor text-sm transition-all ease-in-out duration-300">
+            <li className="my-2 hover:text-goldishColor text-sm transition-all ease-in-out duration-300">
               <Link href="/">Privacy Policy</Link>
             </li>
           </ul>
@@ -32,17 +32,17 @@ const Footer = () => {
         <div className="h-full p-5">
           <h4 className="mb-5 font-semibold text-xl">Social</h4>
           <ul>
-            <li className="my-2 hover:text-thirdColor text-sm transition-all ease-in-out duration-300 flex flex-row items-center gap-1">
+            <li className="my-2 hover:text-goldishColor text-sm transition-all ease-in-out duration-300 flex flex-row items-center gap-1">
               <BsFacebook className="text-lg" />
               <Link href="/">Facebook</Link>
             </li>
-            <li className="my-2 hover:text-thirdColor text-sm transition-all ease-in-out duration-300 flex flex-row items-center gap-1">
+            <li className="my-2 hover:text-goldishColor text-sm transition-all ease-in-out duration-300 flex flex-row items-center gap-1">
               <RiInstagramFill className="text-lg" />
               <Link href="https://www.instagram.com/caicapharmacy/?hl=en">
                 Instagram
               </Link>
             </li>
-            <li className="my-2 hover:text-thirdColor text-sm transition-all ease-in-out duration-300 flex flex-row items-center gap-1">
+            <li className="my-2 hover:text-goldishColor text-sm transition-all ease-in-out duration-300 flex flex-row items-center gap-1">
               <BsTwitter className="text-lg" />
               <Link href="/">Twitter</Link>
             </li>
@@ -59,7 +59,7 @@ const Footer = () => {
           <a
             target="_blank"
             rel="noreferrer"
-            href="https://www.buibuitech.co.tz"
+            href="/"
             className="hover:underline"
           >
             Thomas Johansen

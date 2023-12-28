@@ -2,11 +2,11 @@ import React from "react";
 import hp from "../../assets/images/microsoft4.jpg";
 import { Tooltip } from "./Tooltip";
 
-const ProductCard = () => {
+const ProductCard = ({id}) => {
   return (
     <div className="w-full h-[350px] rounded-xl bg-white flex flex-col gap-1">
       <a
-        href="/"
+        href={`/products/${id}`}
         className="overflow-hidden rounded-xl"
       >
         <img

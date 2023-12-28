@@ -1,10 +1,25 @@
-import React from "react";
+import React, { useState } from "react";
 import ImageSwipe from "../../components/common/ImageSwipe";
 import lenovo from "../../assets/images/lenovo3.png";
 import microsoft from "../../assets/images/microsoft4b.jpg";
 import Button from "../../components/common/Button";
+import { Box, Modal } from "@mui/material";
+
+const style = {
+  position: "absolute",
+  top: "45%",
+  left: "50%",
+  transform: "translate(-50%, -50%)",
+  width: 600,
+  bgcolor: "background.paper",
+  p: 4,
+};
 
 const ProductOverview = () => {
+  const [open, setOpen] = useState(false);
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
+
   const images = [
     { id: 1, url: lenovo },
     { id: 2, url: microsoft },
@@ -37,9 +52,24 @@ const ProductOverview = () => {
               </p>
             </div>
           </div>
+          <Modal
+            open={open}
+            onClose={handleClose}
+            aria-labelledby="modal-modal-title"
+            aria-describedby="modal-modal-description"
+          >
+            <Box sx={style} className="rounded-md">
+              <div>
+                <h3 className="text-center text-xl py-4">
+                  Select Payment Method
+                </h3>
+                <div></div>
+              </div>
+            </Box>
+          </Modal>
           <div className="flex flex-row justify-end items-end py-2">
             <div className="mr-4">
-              <Button text={"Buy Now"}/>
+              <Button text={"Buy Now"} onClick={handleOpen}/>
             </div>
           </div>
         </div>
